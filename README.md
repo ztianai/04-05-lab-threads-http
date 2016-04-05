@@ -22,6 +22,8 @@ Computers as a general rule do exactly one thing a time: your central processing
 
 However, we don't realize that computers do only one thing at a time! This is because computers are really good at _multitasking_: they will do a tiny bit of one task, and then jump over to another task and do a little of that, and then jump over to another task and do a little of that, and then back to the first task, and so on.
 
+![thread switching diagram (source?)](img/thread-switching.jpg)
+
 These "tasks" are divided up into two types: **processes** and **threads**. [Read this brief summary of the difference between them](https://docs.oracle.com/javase/tutorial/essential/concurrency/procthread.html).
 
 So by breaking up a program into threads (which are "interwoven"), we can in effect cause the computer to do two tasks at once. This is _especially_ useful if one of the "tasks" might take a really long time--rather than **blocking** the application, we can let other tasks also make some progress while we're waiting for the long task to finish.
